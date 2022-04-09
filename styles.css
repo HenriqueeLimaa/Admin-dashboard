@@ -1,180 +1,125 @@
 html, body{
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
 }
 
-.announcement{
-    padding: 1rem;
-    grid-area: announcement;
-    background-color: #fff;
-    border-radius: 5px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.announcement-h2{
-    grid-area: announcement-h2;
-}
-
-.card{
-    padding: 1rem;
-    width: fit-content;
-    height: fit-content;
-    background-color: #fff;
-    border-left: 5px solid gold;
-    border-radius: 5px;
-    grid-area: card;
-}
-.card1{
-    grid-area: card1;
-}
-.card2{
-    grid-area: card2;
-}
-.card3{
-    grid-area: card3;
-}
-.card4{
-    grid-area: card4;
-}
-.card5{
-    grid-area: card5;
-}
-.card6{
-    grid-area: card6;
-}
-
-.container {
+.container{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 6fr;
-    grid-template-areas: 
-    "sidebar header header header"
-    "sidebar main main main";
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:  
+    "sidebar header"
+    "sidebar main-content";
 }
 
-.header{
+/* SIDEBAR */
+.sidebar{
+    grid-area: sidebar;
+    background-color: aqua;
+
     padding-left: 2rem;
-    padding-top: 2rem;
+}
 
+/* HEADER */
+.header{
     grid-area: header;
-    background-color: green;
+    background-color: #FFF;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "h-row1"
+    "h-row2";
 
+    padding: 2rem 1rem;
+}
+
+.header-row1{
+    grid-area: h-row1;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 10vh 10vh;
-    grid-template-areas:
-    "searchbar hfrname"
-    "hsrgreet hsrbuttons";
+    grid-template-areas:  
+    "hrow1-1 hrow1-2";
+
+    height: 10vh;
+    padding-left: 2rem;
 }
 
-.header-firstrow-name{
-    grid-area: hfrname;
+    .h-row1-1{
+        grid-area: hrow1-1;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .h-row1-2{
+        grid-area: hrow1-2;
+        display: flex;
+        gap: 2rem;
+        height: 8vh;
+        align-items: center;
+    }
+
+.header-row2{
+    grid-area: h-row2;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:  
+    "hrow2-1 hrow2-2";
+
+    height: 10vh;
+}
+
+    .h-row2-1{
+        grid-area: hrow2-1;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:  
+        "hprofilepic1 hgreeting"
+        "hprofilepic1 hname1";
+
+        gap: 1rem;
+    }
+
+    .h-row2-2{
+        grid-area: hrow2-2;
+        gap: 1rem;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+/* MAIN */
+.main-content{
+    grid-area: main-content;
+    background-color: aliceblue;
+}
+
+
+/* TAGS */
+
+
+/* HEADER TAGS */
+#h-profilepic1{
+    grid-area: hprofilepic1;
+}
+
+#hgreeting{
+    grid-area: hgreeting;
     margin: 0;
 }
 
-.header-secondrow-buttons{
-    grid-area: hsrbuttons;
-    align-self: center;
+#h-name1{
+    grid-area: hname1;
 }
 
-.header-secondrow-greeting{
-    grid-area: hsrgreet;
-}
-
-.main-content{
-    padding-left: 2rem;
-    background-color: blue;
-
-    gap: 1rem;
-    display: grid;
-    grid-area: main;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:  
-    "main-content-cards main-content-stuff";
-}
-
-.main-content-cards{
-    height: fit-content;
-    width: fit-content;
-    gap: 1rem;
-
-    grid-area: main-content-cards;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr repeat(3, 2fr);
-    grid-template-areas:  
-    "your-projects ."
-    "card1 card2"
-    "card3 card4"
-    "card5 card6";
-}
-
-.main-content-stuff{
-    height: 20vh;
-    width: fit-content;
-    gap: 1rem;
-
-    grid-area: main-content-stuff;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
-    grid-template-areas:  
-    "announcement-h2"
-    "announcement"
-    "trending-h2"
-    "trending";
-}
-
-.main-title-h2{
-    grid-area: your-projects;
-}
-
-.searchbar{
-    grid-area: searchbar;
+#h-input{
     width: 40vw;
-    border-radius: 10px;
-    height: 3.5vh;
+    height: 5vh;
 }
 
-.sidebar{
-    padding-left: 2rem;
-
-    grid-area: sidebar;
-    background-color: red;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-    "sidebar-title"
-    "sidebar-first"
-    "sidebar-second";
-}
-
-.sidebar-first{
-    grid-area: sidebar-first;
-}
-
-.sidebar-second{
-    grid-area: sidebar-second;
-}
-
-.title{
-    grid-area: sidebar-title;
-}
-
-.trending-card{
-    padding: 1rem;
-    grid-area: trending;
-    background-color: #fff;
-    border-radius: 5px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.trending-h2{
-    grid-area: trending-h2;
+#h-lupa{
+    height: 7vh;
 }
