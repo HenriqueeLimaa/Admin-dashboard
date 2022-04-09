@@ -5,14 +5,25 @@ html, body{
 }
 
 .announcement{
+    padding: 1rem;
     grid-area: announcement;
+    background-color: #fff;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.announcement-h2{
+    grid-area: announcement-h2;
 }
 
 .card{
+    padding: 1rem;
+    width: fit-content;
+    height: fit-content;
     background-color: #fff;
     border-left: 5px solid gold;
     border-radius: 5px;
-    width: fit-content;
     grid-area: card;
 }
 .card1{
@@ -76,32 +87,49 @@ html, body{
     padding-left: 2rem;
     background-color: blue;
 
+    gap: 1rem;
     display: grid;
     grid-area: main;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:  
-    "main-content-cards main-content-stuff"
-    ;
-
+    "main-content-cards main-content-stuff";
 }
 
 .main-content-cards{
-    grid-area: main-content-cards;
-
+    height: fit-content;
+    width: fit-content;
     gap: 1rem;
+
+    grid-area: main-content-cards;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr repeat(3, 2fr);
     grid-template-areas:  
+    "your-projects ."
     "card1 card2"
     "card3 card4"
-    "card5 card6"
-    ;
+    "card5 card6";
 }
 
 .main-content-stuff{
+    height: 20vh;
+    width: fit-content;
+    gap: 1rem;
+
     grid-area: main-content-stuff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
+    grid-template-areas:  
+    "announcement-h2"
+    "announcement"
+    "trending-h2"
+    "trending";
+}
+
+.main-title-h2{
+    grid-area: your-projects;
 }
 
 .searchbar{
@@ -136,4 +164,17 @@ html, body{
 
 .title{
     grid-area: sidebar-title;
+}
+
+.trending-card{
+    padding: 1rem;
+    grid-area: trending;
+    background-color: #fff;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.trending-h2{
+    grid-area: trending-h2;
 }
