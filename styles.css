@@ -43,19 +43,19 @@ html, body{
     "hrow1-1 hrow1-2";
 
     height: 10vh;
-    padding-left: 2rem;
+    padding-left: 2vw;
 }
 
     .h-row1-1{
         grid-area: hrow1-1;
         display: flex;
-        gap: 1rem;
+        gap: 1vw;
     }
 
     .h-row1-2{
         grid-area: hrow1-2;
         display: flex;
-        gap: 2rem;
+        gap: 1vw;
         height: 8vh;
         align-items: center;
     }
@@ -69,6 +69,7 @@ html, body{
     "hrow2-1 hrow2-2";
 
     height: 10vh;
+    padding-left: 2vw;
 }
 
     .h-row2-1{
@@ -80,12 +81,12 @@ html, body{
         "hprofilepic1 hgreeting"
         "hprofilepic1 hname1";
 
-        gap: 1rem;
+        gap: 1vw;
     }
 
     .h-row2-2{
         grid-area: hrow2-2;
-        gap: 1rem;
+        gap: 1vw;
 
         display: flex;
         align-items: flex-end;
@@ -95,6 +96,23 @@ html, body{
 .main-content{
     grid-area: main-content;
     background-color: aliceblue;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:  
+    "mcolumn1 mcolumn2";
+
+
+    padding-left: 2vw;
+    padding-top: 1vh;
+}
+
+.main-column1{
+    grid-area: mcolumn1;
+}
+
+.main-column2{
+    grid-area: mcolumn2;
 }
 
 
@@ -122,4 +140,14 @@ html, body{
 
 #h-lupa{
     height: 7vh;
+}
+
+/* SIDEBAR TAGS */
+#dashboard{
+    margin-bottom: 8vh;
+    margin-right: 3vw;
+}
+
+#sidebar-nav{
+    margin-bottom: 8vh;
 }
