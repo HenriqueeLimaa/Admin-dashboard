@@ -27,7 +27,7 @@ html, body{
     
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas:
     "h-row1"
     "h-row2";
@@ -93,6 +93,43 @@ html, body{
     }
 
 /* MAIN */
+
+.announcement-card, .trending-card{
+    width: 20vw;
+    height: fit-content;
+    background-color: #fff;
+    padding: 0.5vw;
+    padding-left: 2vw;
+    border-radius: 0.5vw;
+}
+
+.card{
+    width: 20vw;
+    height: fit-content;
+    background-color: #FFF;
+    padding: 1vw;
+    border-left: 0.5vw solid gold;
+    border-radius: 0.5vw;
+}
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card4{
+        grid-area: card4;
+    }
+    .card5{
+        grid-area: card5;
+    }
+    .card6{
+        grid-area: card6;
+    }
+
 .main-content{
     grid-area: main-content;
     background-color: aliceblue;
@@ -102,7 +139,6 @@ html, body{
     grid-template-areas:  
     "mcolumn1 mcolumn2";
 
-
     padding-left: 2vw;
     padding-top: 1vh;
 }
@@ -111,8 +147,30 @@ html, body{
     grid-area: mcolumn1;
 }
 
+.main-column1-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:  
+    "card1 card2"
+    "card3 card4"
+    "card5 card6";
+    row-gap: 2vh;
+}
+
 .main-column2{
     grid-area: mcolumn2;
+}
+
+.t-card{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  
+    "tcardpic tcarduser"
+    "tcardpic tcardtext";
+
+    padding-top: 1vw;
 }
 
 
@@ -150,4 +208,20 @@ html, body{
 
 #sidebar-nav{
     margin-bottom: 8vh;
+}
+
+/* MAIN TAGS */
+#t-card-pic{
+    grid-area: tcardpic;
+    height: 5vh;
+    width: 5vw;
+}
+
+#t-card-user{
+    grid-area: tcarduser;
+    margin: 0;
+}
+
+#t-card-text{
+    grid-area: tcardtext;
 }
