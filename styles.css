@@ -1,6 +1,7 @@
 html, body{
     padding: 0;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container{
@@ -33,6 +34,7 @@ html, body{
     "h-row2";
 
     padding: 2rem 1rem;
+    height: fit-content;
 }
 
 .header-row1{
@@ -101,6 +103,7 @@ html, body{
     padding: 0.5vw;
     padding-left: 2vw;
     border-radius: 0.5vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .card{
@@ -110,6 +113,7 @@ html, body{
     padding: 1vw;
     border-left: 0.5vw solid gold;
     border-radius: 0.5vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
     .card1{
         grid-area: card1;
@@ -132,7 +136,7 @@ html, body{
 
 .main-content{
     grid-area: main-content;
-    background-color: #f0f9ff;
+    background-color: rgb(223, 233, 236);
 
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -141,6 +145,7 @@ html, body{
 
     padding-left: 2vw;
     padding-top: 1vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .main-column1{
@@ -194,7 +199,8 @@ html, body{
 #h-input{
     width: 40vw;
     height: 5vh;
-    background-color: #f0f9ff;
+    background-color: rgb(223, 233, 236);
+    border: none;
 }
 
 #h-lupa{
