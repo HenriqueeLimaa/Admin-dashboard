@@ -15,7 +15,7 @@ html, body{
 /* SIDEBAR */
 .sidebar{
     grid-area: sidebar;
-    background-color: aqua;
+    background-color: #0ea5e9;
 
     padding-left: 2rem;
 }
@@ -132,7 +132,7 @@ html, body{
 
 .main-content{
     grid-area: main-content;
-    background-color: aliceblue;
+    background-color: #f0f9ff;
 
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -194,16 +194,33 @@ html, body{
 #h-input{
     width: 40vw;
     height: 5vh;
+    background-color: #f0f9ff;
 }
 
 #h-lupa{
     height: 7vh;
 }
 
+#header-button{
+    background-color: #0ea5e9;
+    color: #FFF;
+    font-size: medium;
+    font-weight: bold;
+    height: 6vh;
+    width: 6vw;
+    border-radius: 2vh;
+    border: none;
+}
+
 /* SIDEBAR TAGS */
 #dashboard{
     margin-bottom: 8vh;
     margin-right: 3vw;
+    color: #FFF;
+}
+
+#sidebar-itens{
+    color: #FFF;
 }
 
 #sidebar-nav{
